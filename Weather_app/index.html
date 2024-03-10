@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App // JS Project 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href= 'https://fonts.googleapis.com/css?family=Roboto|Pacifico|Poppins' rel='stylesheet'> 
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" class="input__search" placeholder="Enter Your City Name" spellcheck="false">
+            <button class="input__btn"><img src="images/search.png" alt="Search" class="input__btn-img"></button>
+        </div>
+        <div class="weather">
+            <img src="images/clouds.png" alt="rain icon" class="weather__img">
+            <h1 class="weather__temp">22°C</h1>
+            <h2 class="weather__cityName">Coimbatore</h2>
+            <div class="weather__details">
+
+                <div class="col">
+                    <img src="images/humidity.png" alt="" class="col__img">
+                    <div class="col__text">
+                        <p class="col__humidity">50%</p>
+                        <p>humidity</p>
+                    </div>
+                </div>
+
+                <div class="col u-margin-left">
+                    <img src="images/wind.png" alt="" class="col__img">
+                    <div class="col__text">
+                        <p class="col__wind">10 km/hr</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="promise.js"></script>
+</body>
+</html>

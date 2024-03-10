@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #F1F4FD;
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 95%;
+}
+.slider-container {
+    position: relative;
+    padding: 1rem;
+}
+
+.slider-container .image-list {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 1rem;
+    font-size: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-container .image-list::-webkit-scrollbar {
+    display: none;
+}
+.image-item {
+    width: 15rem;
+    height: 10rem;
+
+    object-fit: cover;
+}
+
+.scroll-bar {
+    height: 24px;
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+}
+
+.scroll-bar__track {
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+
+.scroll-bar__thumb {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.scroll-bar__thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.scroll-bar:hover .scroll-bar__track {
+    height: 4px;
+}
+
+.scroll-bar  .scroll-bar__thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+/* Slidding Buttons */
+.slide-button {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background: #000;
+    font-size: 2.2rem;
+    outline:none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slide-button#prev-slide {
+    left: -20px;
+    display: none;
+}
+
+.slide-button#next-slide {
+    right: -20px;
+}
+
+.slide-button:hover {
+    background: #444;
+}
+
